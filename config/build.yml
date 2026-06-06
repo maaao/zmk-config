@@ -1,0 +1,6 @@
+include:
+  - board: seeeduino_xiao_ble
+    shield: lilykeyball_left
+
+  - board: seeeduino_xiao_ble
+    shield: lilykeyball_right
