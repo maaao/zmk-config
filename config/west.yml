@@ -7,7 +7,7 @@ manifest:
       
     # - name: KOHSUK
     #   url-base: https://github.com/KOHSUK
-    -name: maaao
+    - name: maaao
       url-base: https://github.com/maaao
 
     # Additional modules containing boards/shields/custom code can be listed here as well
