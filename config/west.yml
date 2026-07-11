@@ -22,7 +22,7 @@ manifest:
     #   revision: pmw3360
     - name: pmw3360-driver
       remote: maaao
-      revision: main
+      revision: master
 
   self:
     path: config
