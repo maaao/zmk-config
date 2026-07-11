@@ -5,8 +5,10 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
       
-    - name: KOHSUK
-      url-base: https://github.com/KOHSUK
+    # - name: KOHSUK
+    #   url-base: https://github.com/KOHSUK
+    -name: maaao
+      url-base: https://github.com/maaao
 
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
@@ -15,9 +17,12 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
 
-    - name: zmk-pmw3360-driver
-      remote: KOHSUK
-      revision: pmw3360
+    # - name: zmk-pmw3360-driver
+    #   remote: KOHSUK
+    #   revision: pmw3360
+    - name: pmw3360-driver
+      remote: maaao
+      revision: main
 
   self:
     path: config
