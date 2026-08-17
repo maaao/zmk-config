@@ -13,48 +13,48 @@
     // Replace these comments with the GPIO pins in the matrix for the right side.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#shield-overlays
     row-gpios
-        = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-
-        // = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        //  = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         // , <&gpio1 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        // , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         // , <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        // , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio0 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+
+        = <&gpio1 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 12 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 
     col-gpios
-        = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-
-        // = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        // , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        // , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // = <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         // , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        // , <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+
+        = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+        , <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         ;
 };
 
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 15)>,
-                <NRF_PSEL(SPIM_MOSI, 1, 13)>,
-                <NRF_PSEL(SPIM_MISO, 1, 14)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 19)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 2)>,
+                <NRF_PSEL(SPIM_MISO, 0, 3)>;
         };
     };
 
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_SCK, 1, 15)>,
-                <NRF_PSEL(SPIM_MOSI, 1, 13)>,
-                <NRF_PSEL(SPIM_MISO, 1, 14)>;
+            psels = <NRF_PSEL(SPIM_SCK, 1, 19)>,
+                <NRF_PSEL(SPIM_MOSI, 0, 2)>,
+                <NRF_PSEL(SPIM_MISO, 0, 3)>;
             low-power-enable;
         };
     };
@@ -66,7 +66,7 @@
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio1 12 GPIO_ACTIVE_LOW>;
+    cs-gpios = <&gpio0 15 GPIO_ACTIVE_LOW>;
 
     trackball: trackball@0 {
         status = "okay";
