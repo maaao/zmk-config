@@ -24,7 +24,7 @@ manifest:
       remote: maaao
       revision: master
 
-    - name: zmk-duplex-matrix-key-driver
+    - name: zmk-duplex-matrix-driver
       remote: maaao
       revision: master
 
