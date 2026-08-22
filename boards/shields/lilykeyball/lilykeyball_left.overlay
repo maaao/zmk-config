@@ -5,6 +5,8 @@
 #include "lilykeyball.dtsi"
 
 &kscan {
+    diode-direction = "col2row";
+
     row-gpios
         = <&gpio1 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
         , <&gpio1 13 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
