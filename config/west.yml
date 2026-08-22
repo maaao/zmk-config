@@ -24,7 +24,7 @@ manifest:
       remote: maaao
       revision: master
 
-    - name: ssh-zmk-duplex-matrix-key-driver
+    - name: zmk-duplex-matrix-key-driver
       remote: maaao
       revision: master
 
