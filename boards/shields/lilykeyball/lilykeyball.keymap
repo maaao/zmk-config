@@ -20,15 +20,5 @@
                                                  &kp LGUI   &kp A      &kp LALT &kp ENTER     &kp SPACE &kp BSPC                                    &kp A      &studio_unlock
             >;
         };
-
-        lower_layer {
-            display-name = "Lower";
-            status = "reserved";
-        };
-
-        raise_layer {
-            display-name = "Raise";
-            status = "reserved";
-        };
     };
 };
