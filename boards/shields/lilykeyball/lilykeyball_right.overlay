@@ -10,6 +10,8 @@
 };
 
 &kscan {
+    compatible = "zmk,kscan-duplex-matrix";
+
     row-gpios
         = <&gpio1 14 GPIO_ACTIVE_LOW>
         , <&gpio1 5  GPIO_ACTIVE_LOW>
