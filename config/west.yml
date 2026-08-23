@@ -33,6 +33,8 @@ manifest:
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
       revision: master
+      import: west.yml
+
 
   self:
     path: config
