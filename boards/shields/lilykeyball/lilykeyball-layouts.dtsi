@@ -70,8 +70,8 @@
             , <&key_physical_attrs 100 100  800  250       0     0     0>
             , <&key_physical_attrs 100 100  850  400       0     0     0>
             , <&key_physical_attrs 100 100  950  400       0     0     0>
-            , <&key_physical_attrs 100 100 1050  400       0     0     0>
-            , <&key_physical_attrs 100 100 1150  400       0     0     0>
+            , <&key_physical_attrs 100 100 1300  400       0     0     0>
+            , <&key_physical_attrs 100 100 1400  400       0     0     0>
             ;
 
         //wired_split {
