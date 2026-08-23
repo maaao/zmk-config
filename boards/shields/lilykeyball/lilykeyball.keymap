@@ -5,6 +5,63 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        addr: addr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp Y &kp A &kp M &kp A &kp M &kp O &kp T &kp O &kp DOT &kp M &kp A &kp O &kp AT &kp J &kp P &kp DOT &kp F &kp U &kp J &kp I &kp T &kp S &kp U &kp DOT &kp C &kp O &kp M>;
+        };
+
+        admin1: admin1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp LS(A) &kp D &kp M &kp I &kp N &kp MINUS &kp LS(M) &kp A &kp S &kp T &kp E &kp R>;
+        };
+
+        admin2: admin2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp LS(A) &kp D &kp M &kp I &kp N &kp LS(FSLH) &kp LS(M) &kp A &kp S &kp T &kp E &kp R &kp N1>;
+        };
+
+        yama: yama {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp N0 &kp N9 &kp Y &kp A &kp M &kp A &kp N2 &kp N7>;
+        };
+
+        mao: mao {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp N0 &kp N9 &kp M &kp A &kp O &kp N2 &kp N7 &kp LS(FSLH) &kp 0 &kp 0>;
+        };
+
+        gro: gro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp LS(R) &kp S &kp LS(Y) &kp LS(A) &kp LS(FSLH) &kp LS(T) &kp LS(L) &kp RPRN &kp N4 &kp LS(X)>;
+        };
+
+        bios: bios {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp M &kp Z &kp N2 &kp Y &kp H &kp Y &kp S &kp N5>;
+        };
+
+        macro_fugafuga: macro_fugafuga {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp F &kp U &kp G &kp A &kp F &kp U &kp G &kp A &kp AT &kp RPRN &kp LS(FSLH)>;
+        };
+
+        n6_caret: n6_caret {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N6>, <&kp EQUAL>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
@@ -13,12 +70,43 @@
         default_layer {
             bindings = <
                 // ¶Žè                                                                                 // ‰EŽè
-                &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
+                &kp ESC    &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                           &n6_caret  &kp N7     &kp N8     &kp N9     &kp N0     &kp DEL
                 &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P      &kp MINUS
                 &kp LSHFT  &kp A      &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
                 &kp LCTRL  &kp Z      &kp X      &kp C      &kp V      &kp B    &kp LBRC      &kp RBRC  &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp BSLH
-                                                 &kp LGUI   &kp A      &kp LALT &kp ENTER     &kp SPACE &kp BSPC                                    &kp A      &studio_unlock
+                                                 &kp LGUI   &mo 1      &kp LALT &kp ENTER     &kp SPACE &kp BSPC                                    &mo 2      &studio_unlock
             >;
         };
+
+        layer1 {
+            bindings = <
+                &addr &macro_fugafuga &trans &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                                 &trans     &trans     &trans     &trans     &trans     &trans                                      &trans     &trans
+            >;
+        };
+
+        layer2 {
+            bindings = <
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                                 &trans     &trans     &trans     &trans     &trans     &trans                                      &trans     &trans
+            >;
+        };
+
+        layer3 {
+            bindings = <
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
+                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
+                                                 &trans     &trans     &trans     &trans     &trans     &trans                                    &trans     &trans
+            >;
+        };
+
     };
 };
