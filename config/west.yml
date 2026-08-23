@@ -9,6 +9,8 @@ manifest:
     #   url-base: https://github.com/KOHSUK
     - name: maaao
       url-base: https://github.com/maaao
+    - name: sekigon-gonnoc
+      url-base: https://github.com/sekigon-gonnoc
 
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
@@ -26,6 +28,10 @@ manifest:
 
     - name: zmk-duplex-matrix-driver
       remote: maaao
+      revision: master
+
+    - name: zmk-component-bmp-boost
+      remote: sekigon-gonnoc
       revision: master
 
   self:

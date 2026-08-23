@@ -20,7 +20,7 @@
 ---
 
 include:
-  - board: nrfmicro_13
+  - board: bmp_boost
     shield: lilykeyball_left
     snippet: zmk-usb-logging
 
