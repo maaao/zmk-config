@@ -22,6 +22,7 @@
 include:
   - board: nrfmicro_13
     shield: lilykeyball_left
+    snippet: zmk-usb-logging
 
   - board: seeeduino_xiao_ble
     shield: lilykeyball_right
