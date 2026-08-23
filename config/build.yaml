@@ -1,5 +1,5 @@
 include:
-  - board: bmp_boost
+  - board: ble_micro_pro
     shield: lilykeyball_left
     snippet: zmk-usb-logging
 

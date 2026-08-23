@@ -30,9 +30,9 @@ manifest:
       remote: maaao
       revision: master
 
-    - name: zmk-component-bmp-boost
+    - name: zmk-component-ble-micro-pro
       remote: sekigon-gonnoc
-      revision: e868314e45962ef174612817a156029f6ae0d83b
+      revision: v0.2
 
 
   self:
