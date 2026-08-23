@@ -32,8 +32,7 @@ manifest:
 
     - name: zmk-component-bmp-boost
       remote: sekigon-gonnoc
-      revision: master
-      import: west.yml
+      revision: e868314e45962ef174612817a156029f6ae0d83b
 
 
   self:
