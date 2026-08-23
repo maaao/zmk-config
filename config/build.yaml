@@ -1,5 +1,5 @@
 include:
-  - board: seeeduino_xiao_ble
+  - board: nrfmicro_13
     shield: lilykeyball_left
 
   - board: seeeduino_xiao_ble
