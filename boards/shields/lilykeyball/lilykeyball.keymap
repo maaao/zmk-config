@@ -43,6 +43,12 @@
             bindings = < &kp LS(R) &kp S &kp LS(Y) &kp LS(A) &kp LS(FSLH) &kp LS(T) &kp LS(L) &kp RPRN &kp N4 &kp LS(X)>;
         };
 
+        proxy: proxy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp N3 &kp N1 &kp N4 &kp N1 &kp N5 &kp N9 &kp N2>;
+        };
+
         bios: bios {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -55,17 +61,17 @@
             bindings = <&kp F &kp U &kp G &kp A &kp F &kp U &kp G &kp A &kp AT &kp RPRN &kp LS(FSLH)>;
         };
 
+        n2_us: n2_us {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N2>, <&kp LBKT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         n6_us: n6_us {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp N6>, <&kp EQUAL>;
-            mods = <(MOD_LSFT|MOD_RSFT)>;
-        };
-
-        n2_us: n2_us {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp N2>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -147,42 +153,42 @@
 
         default_layer {
             bindings = <
-                // ¶Žè                                                                                 // ‰EŽè
-                &kp ESC    &kp N1     &n2_us    &kp N3     &kp N4      &kp N5                           &n6_us     &n7_us     &n8_us     &n9_us     &n0_us     &kp DEL
-                &kp TAB    &kp Q      &kp W      &kp E      &kp R      &kp T                            &kp Y      &kp U      &kp I      &kp O      &kp P      &minus_us
-                &kp LSHFT  &kp A      &kp S      &kp D      &kp F      &kp G                            &kp H      &kp J      &kp K      &kp L      &semi_us   &sqt_us
-                &kp LCTRL  &kp Z      &kp X      &kp C      &kp V      &kp B    &lbrc_us      &rbrc_us  &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &bslh_us
-                                                 &kp LGUI   &mo 1      &kp LALT &kp ENTER     &kp SPACE &kp BSPC                                    &mo 2      &studio_unlock
+                // ¶Žè                                                                                      // ‰EŽè
+                &kp ESC      &kp N1       &n2_us       &kp N3       &kp N4       &kp N5                                 &n6_us       &n7_us       &n8_us       &n9_us       &n0_us       &kp DEL
+                &kp TAB      &kp Q        &kp W        &kp E        &kp R        &kp T                                  &kp Y        &kp U        &kp I        &kp O        &kp P        &minus_us
+                &kp LSHFT    &kp A        &kp S        &kp D        &kp F        &kp G                                  &kp H        &kp J        &kp K        &kp L        &semi_us     &sqt_us
+                &kp LCTRL    &kp Z        &kp X        &kp C        &kp V        &kp B      &lbrc_us        &rbrc_us    &kp N        &kp M        &kp COMMA    &kp DOT      &kp FSLH     &bslh_us
+                                                       &kp LGUI     &mo 1        &kp LALT   &kp ENTER       &kp SPACE   &kp BSPC                                            &mo 2        &studio_unlock
             >;
         };
 
         layer1 {
             bindings = <
-                &admin1    &addr      &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                                                 &trans     &trans     &trans     &trans     &trans     &trans                                      &trans     &trans
+                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &kp K_BACK   &mkp RCLK    &mo 3        &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                                                       &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
         };
 
         layer2 {
             bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR_ALL       &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                                                 &trans     &trans     &trans     &trans     &trans     &trans                                      &trans     &trans
+                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR_ALL                         &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kpF12
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                                                       &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
         };
 
         layer3 {
             bindings = <
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans                           &trans     &trans     &trans     &trans     &trans     &trans
-                &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans     &trans
-                                                 &trans     &trans     &trans     &trans     &trans     &trans                                      &trans     &trans
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                                                       &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
         };
 
