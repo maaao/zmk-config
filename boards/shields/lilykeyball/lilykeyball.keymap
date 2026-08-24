@@ -25,6 +25,12 @@
             bindings = < &kp LS(A) &kp D &kp M &kp I &kp N &kp LS(FSLH) &kp LS(M) &kp A &kp S &kp T &kp E &kp R &kp N1>;
         };
 
+        admin3: admin3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = < &kp F &kp J &kp MINUS &kp S &kp O &kp F &kp T &kp MINUS &kp C &kp H &kp A &kp R &kp MINUS &kp N1 &kp M &kp E>;
+        };
+
         yama: yama {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -146,6 +152,13 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        tilde_us: tilde_us {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LS(CARET)>, <&kp LS(LBKT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
         bspc_mo: bspc_mo { 
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -183,17 +196,18 @@
 
         layer2 {
             bindings = <
-                &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR_ALL                         &trans       &trans       &trans       &trans       &trans       &trans
+                &tilde_us    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR_ALL                         &out OUT_TOG &trans       &trans       &trans       &trans       &trans
+                //&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR_ALL                         &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
-                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &N1          &n2_us       &N3          &N4          &N5
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &n6_us       &n7_us       &n8_us       &n9_us       &n0_us
                                                        &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
         };
 
         layer3 {
             bindings = <
-                &trans       &trans       &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &admin2      &admin3       &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
