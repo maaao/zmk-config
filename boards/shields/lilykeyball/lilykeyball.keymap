@@ -5,60 +5,229 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define MACRO_WAIT_MS 30
+#define MACRO_TAP_MS  30
+#define MACRO_BLOCK_LAYER 4
+
 / {
     behaviors {
         addr: addr {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp Y &kp A &kp M &kp A &kp M &kp O &kp T &kp O &kp DOT &kp M &kp A &kp O &kp LBKT &kp J &kp P &kp DOT &kp F &kp U &kp J &kp I &kp T &kp S &kp U &kp DOT &kp C &kp O &kp M>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp Y>
+                , <&kp A>
+                , <&kp M>
+                , <&kp A>
+                , <&kp M>
+                , <&kp O>
+                , <&kp T>
+                , <&kp O>
+                , <&kp DOT>
+                , <&kp M>
+                , <&kp A>
+                , <&kp O>
+                , <&kp LBKT>
+                , <&kp J>
+                , <&kp P>
+                , <&kp DOT>
+                , <&kp F>
+                , <&kp U>
+                , <&kp J>
+                , <&kp I>
+                , <&kp T>
+                , <&kp S>
+                , <&kp U>
+                , <&kp DOT>
+                , <&kp C>
+                , <&kp O>
+                , <&kp M>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         admin1: admin1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp LS(A) &kp D &kp M &kp I &kp N &kp MINUS &kp LS(M) &kp A &kp S &kp T &kp E &kp R>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp LS(A)>
+                , <&kp D>
+                , <&kp M>
+                , <&kp I>
+                , <&kp N>
+                , <&kp MINUS>
+                , <&kp LS(M)>
+                , <&kp A>
+                , <&kp S>
+                , <&kp T>
+                , <&kp E>
+                , <&kp R>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         admin2: admin2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp LS(A) &kp D &kp M &kp I &kp N &kp LS(FSLH) &kp LS(M) &kp A &kp S &kp T &kp E &kp R &kp N1>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp LS(A)>
+                , <&kp D>
+                , <&kp M>
+                , <&kp I>
+                , <&kp N>
+                , <&kp LS(FSLH)>
+                , <&kp LS(M)>
+                , <&kp A>
+                , <&kp S>
+                , <&kp T>
+                , <&kp E>
+                , <&kp R>
+                , <&kp N1>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         admin3: admin3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp F &kp J &kp MINUS &kp S &kp O &kp F &kp T &kp MINUS &kp C &kp H &kp A &kp R &kp MINUS &kp N1 &kp M &kp E>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp F>
+                , <&kp J>
+                , <&kp MINUS>
+                , <&kp S>
+                , <&kp O>
+                , <&kp F>
+                , <&kp T>
+                , <&kp MINUS>
+                , <&kp C>
+                , <&kp H>
+                , <&kp A>
+                , <&kp R>
+                , <&kp MINUS>
+                , <&kp N1>
+                , <&kp M>
+                , <&kp E>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         yama: yama {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp N0 &kp N9 &kp Y &kp A &kp M &kp A &kp N2 &kp N7>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp N0>
+                , <&kp N9>
+                , <&kp Y>
+                , <&kp A>
+                , <&kp M>
+                , <&kp A>
+                , <&kp N2>
+                , <&kp N7>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         mao: mao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp N0 &kp N9 &kp M &kp A &kp O &kp N2 &kp N7 &kp LS(FSLH) &kp N0 &kp N0>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp N0>
+                , <&kp N9>
+                , <&kp LS(M)>
+                , <&kp A>
+                , <&kp O>
+                , <&kp N2>
+                , <&kp N7>
+                , <&kp LS(FSLH)>
+                , <&kp N0>
+                , <&kp N0>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         gro: gro {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp LS(R) &kp S &kp LS(Y) &kp LS(A) &kp LS(FSLH) &kp LS(T) &kp LS(L) &kp RPRN &kp N4 &kp LS(X)>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp LS(R)>
+                , <&kp S>
+                , <&kp LS(Y)>
+                , <&kp LS(A)>
+                , <&kp LS(FSLH)>
+                , <&kp LS(T)>
+                , <&kp LS(L)>
+                , <&kp LS(n0_us)>
+                , <&kp N4>
+                , <&kp LS(X)>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         proxy: proxy {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp N3 &kp N1 &kp N4 &kp N1 &kp N5 &kp N9 &kp N2>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp N3>
+                , <&kp N1>
+                , <&kp N4>
+                , <&kp N1>
+                , <&kp N5>
+                , <&kp N9>
+                , <&kp N2>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         bios: bios {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp M &kp Z &kp N2 &kp Y &kp H &kp Y &kp S &kp N5>;
+            wait-ms = <MACRO_WAIT_MS>;
+            tap-ms = <MACRO_TAP_MS>;
+
+            bindings =
+                <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&kp M>
+                , <&kp Z>
+                , <&kp N2>
+                , <&kp Y>
+                , <&kp H>
+                , <&kp Y>
+                , <&kp S>
+                , <&kp N5>
+                , <&macro_release &mo MACRO_BLOCK_LAYER>
+                ;
         };
 
         n2_us: n2_us {
@@ -212,6 +381,16 @@
                 &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
+            >;
+        };
+
+        layer4 {
+            bindings = <
+                &none        &none        &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
+                &none        &none        &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
+                &none        &none        &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
+                &none        &none        &none        &none        &none        &none                                  &none        &none        &none        &none        &none        &none 
+                                                       &none        &none        &none        &none        &none        &none                                               &none        &none 
             >;
         };
 
