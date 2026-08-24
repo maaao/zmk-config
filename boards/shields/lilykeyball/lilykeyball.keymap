@@ -139,6 +139,14 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
+        equ_us: equ_us {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+
+            bindings = <&kp EQUAL>, <&kp LS(SEMICOLON)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        }
+
         bspc_mo: bspc_mo { 
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -167,7 +175,7 @@
         layer1 {
             bindings = <
                 &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &equ_us
                 &trans       &mkp MB4     &mkp RCLK    &mo 3        &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &kp HOME     &kp END      &trans       &trans
                                                        &trans       &trans       &trans       &trans       &trans       &kp DEL                                             &trans       &trans
