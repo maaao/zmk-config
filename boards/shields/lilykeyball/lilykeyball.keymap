@@ -142,10 +142,9 @@
         equ_us: equ_us {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-
             bindings = <&kp EQUAL>, <&kp LS(SEMICOLON)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
-        }
+        };
 
         bspc_mo: bspc_mo { 
             compatible = "zmk,behavior-hold-tap";
