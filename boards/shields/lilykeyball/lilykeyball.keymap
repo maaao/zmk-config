@@ -55,12 +55,6 @@
             bindings = < &kp M &kp Z &kp N2 &kp Y &kp H &kp Y &kp S &kp N5>;
         };
 
-        macro_fugafuga: macro_fugafuga {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp F &kp U &kp G &kp A &kp F &kp U &kp G &kp A &kp AT &kp RPRN &kp LS(FSLH)>;
-        };
-
         n2_us: n2_us {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -163,9 +157,12 @@
 
         layer1 {
             bindings = <
-                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &mkp MB4     &mkp RCLK    &trans       &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &trans
+                //&kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &trans       &trans       &trans       &trans       &trans       &trans
+                //&trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &trans
+                //&trans       &mkp MB4     &mkp RCLK    &trans       &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
