@@ -161,8 +161,8 @@
                 //&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &trans
                 //&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
-                //&trans       &mkp MB4     &mkp RCLK    &trans       &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &trans
-                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &mkp MB4     &mkp RCLK    &trans       &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &trans
+                //&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
@@ -183,8 +183,8 @@
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
-                //&trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                //&trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
                                                        &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
             >;
         };
