@@ -5,8 +5,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-#define MACRO_WAIT_MS 35
-#define MACRO_TAP_MS  35
+#define MACRO_WAIT_MS 50
+#define MACRO_TAP_MS  50
 #define MACRO_BLOCK_LAYER 4
 
 / {

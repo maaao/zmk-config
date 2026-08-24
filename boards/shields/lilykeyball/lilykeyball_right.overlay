@@ -62,6 +62,7 @@
         // Use standard 4-wire SPI: CS, SCK, MOSI, MISO.
         // The driver intentionally runs in polling mode, matching the QMK-style logic.
         spi-max-frequency = <2000000>;
+        scroll-layers = <3>;
     };
 };
 
