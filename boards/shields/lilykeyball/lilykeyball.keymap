@@ -34,7 +34,7 @@
         mao: mao {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = < &kp N0 &kp N9 &kp M &kp A &kp O &kp N2 &kp N7 &kp LS(FSLH) &kp 0 &kp 0>;
+            bindings = < &kp N0 &kp N9 &kp M &kp A &kp O &kp N2 &kp N7 &kp LS(FSLH) &kp N0 &kp N0>;
         };
 
         gro: gro {
