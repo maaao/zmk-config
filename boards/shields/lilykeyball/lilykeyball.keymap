@@ -142,7 +142,7 @@
         equ_us: equ_us {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp EQUAL>, <&kp LS(SEMICOLON)>;
+            bindings = <&kp LS(MINUS)>, <&kp LS(SEMICOLON)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
