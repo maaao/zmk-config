@@ -6,7 +6,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 #define MACRO_WAIT_MS 50
-#define MACRO_TAP_MS  50
+#define MACRO_TAP_MS  20
 #define MACRO_BLOCK_LAYER 4
 
 / {
@@ -19,6 +19,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp Y>
                 , <&kp A>
                 , <&kp M>
@@ -58,6 +59,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp LS(A)>
                 , <&kp D>
                 , <&kp M>
@@ -82,6 +84,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp LS(A)>
                 , <&kp D>
                 , <&kp M>
@@ -107,6 +110,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp F>
                 , <&kp J>
                 , <&kp MINUS>
@@ -135,6 +139,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp N0>
                 , <&kp N9>
                 , <&kp Y>
@@ -155,6 +160,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp N0>
                 , <&kp N9>
                 , <&kp LS(M)>
@@ -177,6 +183,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp LS(R)>
                 , <&kp S>
                 , <&kp LS(Y)>
@@ -199,6 +206,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp N3>
                 , <&kp N1>
                 , <&kp N4>
@@ -218,6 +226,7 @@
 
             bindings =
                 <&macro_press &mo MACRO_BLOCK_LAYER>
+                , <&macro_tap>
                 , <&kp M>
                 , <&kp Z>
                 , <&kp N2>
