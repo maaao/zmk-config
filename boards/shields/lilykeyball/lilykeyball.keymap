@@ -184,7 +184,7 @@
                 , <&kp LS(FSLH)>
                 , <&kp LS(T)>
                 , <&kp LS(L)>
-                , <&kp LS(n0_us)>
+                , <&kp RPRN>
                 , <&kp N4>
                 , <&kp LS(X)>
                 , <&macro_release &mo MACRO_BLOCK_LAYER>
