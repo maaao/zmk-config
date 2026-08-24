@@ -5,10 +5,9 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
       
-    # - name: KOHSUK
-    #   url-base: https://github.com/KOHSUK
     - name: maaao
       url-base: https://github.com/maaao
+
     - name: sekigon-gonnoc
       url-base: https://github.com/sekigon-gonnoc
 
@@ -19,9 +18,6 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
 
-    # - name: zmk-pmw3360-driver
-    #   remote: KOHSUK
-    #   revision: pmw3360
     - name: pmw3360-driver
       remote: maaao
       revision: master
@@ -33,7 +29,6 @@ manifest:
     - name: zmk-component-ble-micro-pro
       remote: sekigon-gonnoc
       revision: v0.2
-
 
   self:
     path: config
