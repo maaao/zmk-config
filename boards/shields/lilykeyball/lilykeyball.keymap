@@ -368,7 +368,7 @@
                 &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &equ_us
                 &trans       &mkp MB4     &mkp RCLK    &mo 3        &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &kp HOME     &kp END      &trans       &trans
-                                                       &trans       &trans       &trans       &trans       &trans       &kp DEL                                             &trans       &trans
+                                                       &trans       &trans       &trans       &trans       &INT_4       &kp DEL                                             &INT2        &trans
             >;
         };
 
@@ -379,13 +379,13 @@
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &kp N1       &n2_us       &kp N3       &kp N4       &kp N5
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &n6_us       &n7_us       &n8_us       &n9_us       &n0_us
-                                                       &trans       &trans       &trans       &trans       &trans       &trans                                              &trans       &trans
+                                                       &trans       &trans       &trans       &INT5        &trans       &trans                                              &trans       &trans
             >;
         };
 
         layer3 {
             bindings = <
-                &admin2      &admin3       &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
+                &admin2      &admin3      &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
