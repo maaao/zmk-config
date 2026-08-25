@@ -350,7 +350,7 @@
         tilde_us: tilde_us {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LS(CARET)>, <&kp LS(LBKT)>;
+            bindings = <&kp LS(EQUAL)>, <&kp LS(LBKT)>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
