@@ -401,10 +401,10 @@
 
         layer3 {
             bindings = <
-                &admin2      &admin3      &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &kp N1       &kp n2_us    &kp N3
-                &trans       &trans       &trans       &trans       &trans       &trans                                 &pmw CUR_S   &pmw CUR_F   &trans       &kp N4       &kp N5       &kp n6_us
-                &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &pmw VSCR_S  &pmw VSCR_F  &trans       &kp n7_us    &kp n8_us    &kp n9_us
-                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &pmw HSCR_S  &pmw HSCR_F  &trans       &trans       &kp n0_us    &trans
+                &admin2      &admin3      &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &kp N1       &n2_us       &kp N3
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &pmw CUR_S   &pmw CUR_F   &trans       &kp N4       &kp N5       &n6_us
+                &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &pmw VSCR_S  &pmw VSCR_F  &trans       &n7_us       &n8_us       &n9_us
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &pmw HSCR_S  &pmw HSCR_F  &trans       &trans       &n0_us       &trans
                                                        &trans       &trans       &trans       &trans       &pmw RESET   &trans                                              &trans       &trans
             >;
         };
