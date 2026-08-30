@@ -381,7 +381,7 @@
 
         layer1 {
             bindings = <
-                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &trans       &trans       &trans       &trans       &trans       &trans
+                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &kp C_AL_CALC &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp PSCRN
                 &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &equ_us
                 &trans       &mkp MB4     &mkp RCLK    &mo 3        &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &kp HOME     &kp END      &trans       &trans
@@ -401,10 +401,10 @@
 
         layer3 {
             bindings = <
-                &admin2      &admin3      &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans       &trans       &trans       &trans                                 &pmw CUR_S   &pmw CUR_F   &pmw VSCR_S  &pmw VSCR_F  &pmw HSCR_S  &pmw HSCR_F
-                &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &trans       &trans       &trans       &trans       &trans       &trans
-                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans
+                &admin2      &admin3      &gro         &trans       &trans       &trans                                 &trans       &trans       &trans       &kp N1       &kp n2_us    &kp N3
+                &trans       &trans       &trans       &trans       &trans       &trans                                 &pmw CUR_S   &pmw CUR_F   &trans       &kp N4       &kp N5       &kp n6_us
+                &trans       &trans       &trans       &trans       &mkp MCLK    &trans                                 &pmw VSCR_S  &pmw VSCR_F  &trans       &kp n7_us    &kp n8_us    &kp n9_us
+                &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &pmw HSCR_S  &pmw HSCR_F  &trans       &trans       &kp n0_us    &trans
                                                        &trans       &trans       &trans       &trans       &pmw RESET   &trans                                              &trans       &trans
             >;
         };
