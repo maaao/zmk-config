@@ -364,6 +364,34 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        jk_click {
+            timeout-ms = <50>;
+            key-positions = <31 32>;
+            bindings = <&mkp LCLK>;
+            layers = <0>;
+            slow-release;
+        };
+
+        kl_click {
+            timeout-ms = <50>;
+            key-positions = <32 33>;
+            bindings = <&mkp RCLK>;
+            layers = <0>;
+            slow-release;
+        };
+
+        jl_click {
+            timeout-ms = <50>;
+            key-positions = <31 33>;
+            bindings = <&mkp MCLK>;
+            layers = <0>;
+            slow-release;
+        };
+    };
+
     // Define a default keymap here.
     // See https://zmk.dev/docs/development/hardware-integration/new-shield#default-keymap.
     keymap {
@@ -381,7 +409,7 @@
 
         layer1 {
             bindings = <
-                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &kp C_AL_CALC &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &kp PSCRN
+                &kp GRAVE    &admin1      &addr        &mao         &proxy       &yama                                  &kp C_AL_CALC &kp C_VOL_DN &kp C_VOL_UP &kp C_BRI_DN &kp C_BRI_UP &trans
                 &trans       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6                                 &trans       &trans       &trans       &trans       &trans       &equ_us
                 &trans       &mkp MB4     &mkp RCLK    &mo 3        &mkp LCLK    &trans                                 &trans       &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &trans
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &kp HOME     &kp END      &trans       &trans
@@ -391,7 +419,7 @@
 
         layer2 {
             bindings = <
-                &tilde_us    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR_ALL                         &out OUT_TOG &trans       &trans       &trans       &trans       &trans
+                &tilde_us    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_CLR_ALL                         &out OUT_TOG &trans       &trans       &trans       &trans       &kp PSCRN
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
                 &trans       &trans       &trans       &trans       &trans       &trans                                 &trans       &kp N1       &n2_us       &kp N3       &kp N4       &kp N5
                 &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &trans       &n6_us       &n7_us       &n8_us       &n9_us       &n0_us
